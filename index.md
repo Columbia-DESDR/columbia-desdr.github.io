@@ -21,7 +21,20 @@ Existing approaches for disaster detection, mapping, and prediction primarily re
 
 ## Open Source Software
 
+**iKon** has been deployed twice, and collected thousands of responses from farmers
+
+* [iKon prototype](https://fist-ikonadmin.iri.columbia.edu/login?next=%2Fadmin)
+
+
+The **Reptile Data Cleaning System** has been used to clean hunderds of survey records by local users in two field tests
+
+* [Complaint-driven data cleaning tool](https://fist-cleandat.iri.columbia.edu/comzambia)
+* [Visualization of Zambia survey data](https://fist-cleandat.iri.columbia.edu/viewrec2)
+
+
+Our DBT-based Insurance Design Tool has been field tested in Zambia and Ethiopia
+
 * [Zambia Insurance Design Tool](https://github.com/Columbia-DESDR/zambia)
-* [iKon prototype](#)
+
 
 

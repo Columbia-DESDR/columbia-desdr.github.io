@@ -17,6 +17,9 @@
 # Project specific tags are fine as well.  For instance, precision interfaces has a custom "pi" tag
 #
 
+- title: Using Tech to Help African Farmers Collect Index Insurance Payouts
+  conf: News Article Aug 2022
+  url: https://www.engineering.columbia.edu/news/using-tech-help-african-farmers-collect-payouts
 - title: 'Reptile: Aggregation-level Explanations for Hierarchical Data'
   authors: Zachary Huang, Eugene Wu
   conf: SIGMOD 2022 
