@@ -1,7 +1,7 @@
 ---
 layout: project
 color: "#a864bd"
-logo: NSF ELEMENTS: DESDR
+logo: NSF ELEMENTS DESDR
 ---
 
 <div class="callout">
@@ -15,9 +15,9 @@ Existing approaches for disaster detection, mapping, and prediction primarily re
 
 ## Principal Investigators
 
-* [Daniel Osgood](https://iri.columbia.edu/contact/staff-directory/daniel-osgood/)
-* [Eugene Wu](https://www.eugenewu.net), Columbia University 
-* [Lydia Chilton](https://www.cs.columbia.edu/~chilton/chilton.html#)
+* [Daniel Osgood](https://iri.columbia.edu/contact/staff-directory/daniel-osgood/), IRI, Columbia University
+* [Eugene Wu](https://www.eugenewu.net), CS, Columbia University 
+* [Lydia Chilton](https://www.cs.columbia.edu/~chilton/chilton.html#), CS, Columbia University
 
 ## Open Source Software
 
@@ -32,7 +32,7 @@ The **Reptile Data Cleaning System** has been used to clean hunderds of survey r
 * [Visualization of Zambia survey data](https://fist-cleandat.iri.columbia.edu/viewrec2)
 
 
-Our DBT-based Insurance Design Tool has been field tested in Zambia and Ethiopia
+Our **DBT-based Insurance Design Tool** has been field tested in Zambia and Ethiopia
 
 * [Zambia Insurance Design Tool](https://github.com/Columbia-DESDR/zambia)
 
