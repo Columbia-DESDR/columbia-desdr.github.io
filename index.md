@@ -38,9 +38,10 @@ Our **DBT-based Insurance Design Tool** has been field tested in Zambia and Ethi
 
 * [Zambia Insurance Design Tool](https://github.com/Columbia-DESDR/zambia)
 
-WhatsApp farmer crowdsourcing tool. Developed as part of the NSF DESDR grant at Columbia University:
+WhatsApp farmer crowdsourcing tool **Survey your Way** . Developed as part of the NSF DESDR grant at Columbia University:
 
-* [Admin UI](https://fist-noki.iri.columbia.edu/)
+* [Read about the idea](https://share.nuclino.com/p/DESDR-Survey-Tool-yjKGW4mhV8nuGCmHrO5QtQ)
+* [Admin UI (needs login credentials)](https://fist-noki.iri.columbia.edu/)
 * [Code](https://github.com/Columbia-DESDR/desdr-survey-tool)
 
 
