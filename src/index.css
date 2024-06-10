@@ -14,7 +14,7 @@ body {
   color: var(--secondary-color);
 }
 
-h1 {
+h1, h2 {
   font-family: "Abril Fatface", serif;
   text-align: center;
 }
@@ -123,6 +123,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
+  text-align: center;
 }
 
 /* publication section */
@@ -186,6 +187,7 @@ h1 {
   border: 1px solid var(--secondary-color);
   transition: background-position 0.5s, color 0.5s;
   margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
 .btn_secondary_light:hover {
@@ -229,4 +231,27 @@ h1 {
   cursor: pointer;
   background-position: left bottom;
   color: var(--primary-color);
+}
+
+/* Survey Your way Page */
+
+/* Reptile Page */
+
+/* Sliders Page */
+
+/* Page common */
+
+.page {
+  padding: 10rem;
+  height: calc(100vh - 20rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page__desc {
+  letter-spacing: 2px;
+  line-height: 24px;
+  margin-bottom: 3rem;
 }
