@@ -1,10 +1,10 @@
 import React from 'react'
 
-const PrimaryBtn = ({children, onClick}) => {
+const PrimaryBtn = ({children, onClick, id}) => {
   return (
-    <button className='btn_primary' onClick={onClick}>
+    <a href={id} className='btn_primary' onClick={onClick}>
       {children}
-    </button>
+    </a>
   )
 }
 

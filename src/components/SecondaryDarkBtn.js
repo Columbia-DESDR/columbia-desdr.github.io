@@ -1,10 +1,10 @@
 import React from 'react'
 
-const SecondaryDarkBtn = ({children, onClick}) => {
+const SecondaryDarkBtn = ({children, onClick, id}) => {
   return (
-    <button className='btn_secondary_dark' onClick={onClick}>
-      {children}
-    </button>
+    <a href={id} className='btn_secondary_dark' onClick={onClick}>
+    {children}
+    </a>
   )
 }
 

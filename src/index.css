@@ -3,6 +3,10 @@
   --secondary-color: #39463C;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -142,7 +146,8 @@ h1 {
   color: var(--primary-color);
   padding: 1rem 1.2rem;
   border: 1px solid var(--secondary-color);
-  transition: background-position 0.5s, color 0.5s; /* Smooth transition for background and color */
+  transition: background-position 0.5s, color 0.5s;
+  text-decoration: none;
 }
 
 .btn_primary:hover {
@@ -162,6 +167,7 @@ h1 {
   border: 1px solid var(--primary-color);
   transition: background-position 0.5s, color 0.5s;
   margin-bottom: 1rem;
+  text-decoration: none;
 }
 
 .btn_secondary_dark:hover {
