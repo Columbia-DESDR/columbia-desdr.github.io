@@ -1,7 +1,7 @@
 {
   "name": "website",
   "version": "0.1.0",
-  "homepage": "https://columbia-desdr.github.io/columbia-desdr.github.io",
+  "homepage": "https://Columbia-DESDR.github.io/website",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
