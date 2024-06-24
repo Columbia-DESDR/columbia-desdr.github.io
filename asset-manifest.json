@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/columbia-desdr.github.io/static/css/main.e8fc23c4.css",
-    "main.js": "/columbia-desdr.github.io/static/js/main.73bc1c63.js",
+    "main.js": "/columbia-desdr.github.io/static/js/main.f6bbd6e3.js",
     "static/media/main.png": "/columbia-desdr.github.io/static/media/main.f66083c6611bd91e3308.png",
     "static/media/lydia.png": "/columbia-desdr.github.io/static/media/lydia.b82725bef16aad0cc990.png",
     "static/media/wu.png": "/columbia-desdr.github.io/static/media/wu.53141dbe1ca398b0686e.png",
     "static/media/daniel.png": "/columbia-desdr.github.io/static/media/daniel.234d40185d998938356c.png",
     "index.html": "/columbia-desdr.github.io/index.html",
     "main.e8fc23c4.css.map": "/columbia-desdr.github.io/static/css/main.e8fc23c4.css.map",
-    "main.73bc1c63.js.map": "/columbia-desdr.github.io/static/js/main.73bc1c63.js.map"
+    "main.f6bbd6e3.js.map": "/columbia-desdr.github.io/static/js/main.f6bbd6e3.js.map"
   },
   "entrypoints": [
     "static/css/main.e8fc23c4.css",
-    "static/js/main.73bc1c63.js"
+    "static/js/main.f6bbd6e3.js"
   ]
 }
