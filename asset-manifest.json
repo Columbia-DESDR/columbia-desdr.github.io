@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/columbia-desdr.github.io/static/css/main.e8fc23c4.css",
-    "main.js": "/columbia-desdr.github.io/static/js/main.f6bbd6e3.js",
-    "static/media/main.png": "/columbia-desdr.github.io/static/media/main.f66083c6611bd91e3308.png",
+    "main.css": "/columbia-desdr.github.io/static/css/main.0d76b78f.css",
+    "main.js": "/columbia-desdr.github.io/static/js/main.c86dcea5.js",
+    "static/media/main.png": "/columbia-desdr.github.io/static/media/main.dd0bbcf4df59448225c2.png",
     "static/media/lydia.png": "/columbia-desdr.github.io/static/media/lydia.b82725bef16aad0cc990.png",
     "static/media/wu.png": "/columbia-desdr.github.io/static/media/wu.53141dbe1ca398b0686e.png",
     "static/media/daniel.png": "/columbia-desdr.github.io/static/media/daniel.234d40185d998938356c.png",
     "index.html": "/columbia-desdr.github.io/index.html",
-    "main.e8fc23c4.css.map": "/columbia-desdr.github.io/static/css/main.e8fc23c4.css.map",
-    "main.f6bbd6e3.js.map": "/columbia-desdr.github.io/static/js/main.f6bbd6e3.js.map"
+    "main.0d76b78f.css.map": "/columbia-desdr.github.io/static/css/main.0d76b78f.css.map",
+    "main.c86dcea5.js.map": "/columbia-desdr.github.io/static/js/main.c86dcea5.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8fc23c4.css",
-    "static/js/main.f6bbd6e3.js"
+    "static/css/main.0d76b78f.css",
+    "static/js/main.c86dcea5.js"
   ]
 }
