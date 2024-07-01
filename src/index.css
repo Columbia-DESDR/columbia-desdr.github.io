@@ -45,6 +45,10 @@ h1, h2 {
   padding: 3rem 5rem;
 }
 
+.hero__title {
+  margin: 0;
+}
+
 .hero_desc {
   text-align: center;
   letter-spacing: 2px;

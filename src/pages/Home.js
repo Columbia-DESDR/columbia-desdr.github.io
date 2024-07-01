@@ -15,8 +15,8 @@ function App() {
           <img className='hero__img' src={mainImg} alt='hero' />
         </div>
         <div className='hero__col_right'>
-          <h1 className='hero__title'>Decider</h1>
-          <h2>Open Insurance Toolkit</h2>
+          <h1 className='hero__title'>DESDR</h1>
+          <h1 className='hero__title'>Open Insurance Toolkit</h1>
           <p className='hero_desc'>Traditional disaster risk management often relies on satellite data, which might not fully reflect the realities faced by vulnerable communities. DESDR (Decision Engine for Socioeconomic Disaster Risk) transforms this approach by integrating firsthand information from those most affected, enhancing accuracy and insight into disaster risks</p>
           <PrimaryBtn onClick={() => console.log('call to action')} id={'#toolkit-section'}>EXPLORE OUR TOOLKIT</PrimaryBtn>
         </div>
