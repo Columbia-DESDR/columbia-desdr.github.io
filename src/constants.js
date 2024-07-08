@@ -1,15 +1,25 @@
 
-import sponsor1 from './images/sponsor1.png'
 import daniel from './images/daniel.png'
 import wu from './images/wu.png'
 import lydia from './images/lydia.png'
 
-export const sponsors = [sponsor1, sponsor1, sponsor1, sponsor1, sponsor1]
+import prodIkon from './images/prod-ikon.png'
+import prodReptile from './images/prod-reptile.png'
+import prodSlider from './images/prod-slider.png'
+
+import logoCCS from './images/logo-ccs.jpeg'
+import logoCSE from './images/logo-cse.png'
+import logoICRISAT from './images/logo-icrisat.png'
+import logoIRI from './images/logo-iri.png'
+import logoServir from './images/logo-servir.png'
+import logoUSAID from './images/logo-usaid.png'
+
+export const sponsors = [logoCCS, logoCSE, logoICRISAT, logoIRI, logoServir, logoUSAID]
 
 export const toolkit = [
-  {name: '01. Survey Your Way →', link: '/survey-your-way', subName: 'DATA COLLECTION', desc: 'First, we utilize mobile messaging platforms for accessible and respectful engagement and data collection from local communities', deployed: [{name: 'Senegal →', link: ''}]},
-  {name: '02. Reptile →', link: '/reptile', subName: 'DATA VERIFICATION', desc: 'Then, we ensure data accuracy and security using this tool', deployed: [{name: 'Ethiopia →', link: ''}, {name: 'Zambia →', link: 'https://fist-cleandat.iri.columbia.edu/comzambia'}, {name: 'Nigeria →', link: ''}, {name: 'Congo →', link: ''}]},
-  {name: '03. Sliders →', link: '/sliders', subName: 'DATA ACCESSIBILITY', desc: 'Now finally, though this web platform, policy makers can access and utilize data to make informed decisions', deployed: [{name: 'Ethiopia →', link: 'https://columbia-desdr.github.io/Sliders-ethiopia/'}, {name: 'Zambia →', link: ''}, {name: 'Nigeria →', link: 'https://columbia-desdr.github.io/Sliders-nigeria/'}, {name: 'Congo →', link: 'https://columbia-desdr.github.io/Sliders-drc'}]}
+  {name: '01. Survey Your Way →', img: prodIkon, alt: 'product ikon', link: '/survey-your-way', subName: 'DATA COLLECTION', desc: 'First, we utilize mobile messaging platforms for accessible and respectful engagement and data collection from local communities', deployed: [{name: 'Senegal →', link: ''}]},
+  {name: '02. Reptile →', img: prodReptile, alt: 'product reptile', link: '/reptile', subName: 'DATA VERIFICATION', desc: 'Then, we ensure data accuracy and security using this tool', deployed: [{name: 'Ethiopia →', link: ''}, {name: 'Zambia →', link: 'https://fist-cleandat.iri.columbia.edu/comzambia'}, {name: 'Nigeria →', link: ''}, {name: 'Congo →', link: ''}]},
+  {name: '03. Sliders →', img: prodSlider, alt: 'product slider', link: '/sliders', subName: 'DATA VISUALIZATION', desc: 'Now finally, though this web platform, policy makers can access and utilize data to make informed decisions', deployed: [{name: 'Ethiopia →', link: 'https://columbia-desdr.github.io/Sliders-ethiopia/'}, {name: 'Zambia →', link: ''}, {name: 'Nigeria →', link: 'https://columbia-desdr.github.io/Sliders-nigeria/'}, {name: 'Congo →', link: 'https://columbia-desdr.github.io/Sliders-drc'}]}
 ]
 
 export const principalInvestigators = [

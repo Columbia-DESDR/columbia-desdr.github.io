@@ -15,15 +15,18 @@ function App() {
           <img className='hero__img' src={mainImg} alt='hero' />
         </div>
         <div className='hero__col_right'>
-          <h1 className='hero__title'>DESDR</h1>
-          <h1 className='hero__title'>Open Insurance Toolkit</h1>
-          <p className='hero_desc'>Traditional disaster risk management often relies on satellite data, which might not fully reflect the realities faced by vulnerable communities. DESDR (Decision Engine for Socioeconomic Disaster Risk) transforms this approach by integrating firsthand information from those most affected, enhancing accuracy and insight into disaster risks</p>
-          <PrimaryBtn onClick={() => console.log('call to action')} id={'#toolkit-section'}>EXPLORE OUR TOOLKIT</PrimaryBtn>
+          <div>
+            <h1 className='hero__title'>DESDR</h1>
+            <h1 className='hero__title'>Open Insurance Toolkit</h1>
+            <p className='hero__desc'>Traditional disaster risk management often relies on satellite data, which might not fully reflect the realities faced by vulnerable communities. DESDR (Decision Engine for Socioeconomic Disaster Risk) transforms this approach by integrating firsthand information from those most affected, enhancing accuracy and insight into disaster risks</p>
+            <div className='hero__btn'>
+              <PrimaryBtn onClick={() => console.log('call to action')} id={'/#/#toolkit-section'}>EXPLORE OUR TOOLKIT</PrimaryBtn>
+            </div>
+          </div>
+          <div className='sponsors'>
+            {sponsors.map((sponsor,k) => <img className='sponsors__img' key={k} src={sponsor} alt='sponsor' />)}
+          </div>
         </div>
-      </div>
-
-      <div className='sponsors'>
-        {sponsors.map((sponsor,k) => <img key={k} src={sponsor} alt='sponsor' />)}
       </div>
 
       <div className='toolkit' id='toolkit-section'>
@@ -33,6 +36,7 @@ function App() {
           {toolkit.map((tool,ki) => (
             <div className='toolkit__col' key={ki}>
               <div onClick={() => navigate(tool.link)} className='div_secondary_light'>{tool.name}</div>
+              <img src={tool.img} alt={tool.alt} className='toolkit__img' />
               <p className='toolkit__subtitle'>{tool.subName}</p>
               <p className='toolkit__desc'>{tool.desc}</p>
               {tool.deployed.map((dep,kj) => (
