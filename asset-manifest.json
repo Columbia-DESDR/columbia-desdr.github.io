@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.be3f7aa8.css",
-    "main.js": "/static/js/main.ce36d43c.js",
+    "main.js": "/static/js/main.dbd5a666.js",
     "static/media/prod-slider.png": "/static/media/prod-slider.22059641c2c753500472.png",
     "static/media/main.png": "/static/media/main.40591b025dbab93e484b.png",
     "static/media/prod-reptile.png": "/static/media/prod-reptile.e344ed8c83876d184000.png",
@@ -17,10 +17,10 @@
     "static/media/logo-iri.png": "/static/media/logo-iri.f6ef9eb8ef506c5a563d.png",
     "index.html": "/index.html",
     "main.be3f7aa8.css.map": "/static/css/main.be3f7aa8.css.map",
-    "main.ce36d43c.js.map": "/static/js/main.ce36d43c.js.map"
+    "main.dbd5a666.js.map": "/static/js/main.dbd5a666.js.map"
   },
   "entrypoints": [
     "static/css/main.be3f7aa8.css",
-    "static/js/main.ce36d43c.js"
+    "static/js/main.dbd5a666.js"
   ]
 }
