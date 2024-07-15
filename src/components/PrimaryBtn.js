@@ -1,8 +1,8 @@
 import React from 'react'
 
-const PrimaryBtn = ({children, onClick, id}) => {
+const PrimaryBtn = ({children, onClick}) => {
   return (
-    <a href={id} className='btn_primary' onClick={onClick}>
+    <a className='btn_primary' onClick={onClick}>
       {children}
     </a>
   )

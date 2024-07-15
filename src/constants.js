@@ -17,9 +17,9 @@ import logoUSAID from './images/logo-usaid.png'
 export const sponsors = [logoCCS, logoCSE, logoICRISAT, logoIRI, logoServir, logoUSAID]
 
 export const toolkit = [
-  {name: '01. Survey Your Way →', img: prodIkon, alt: 'product ikon', link: '/survey-your-way', subName: 'DATA COLLECTION', desc: 'First, we utilize mobile messaging platforms for accessible and respectful engagement and data collection from local communities', deployed: [{name: 'Senegal →', link: ''}]},
-  {name: '02. Reptile →', img: prodReptile, alt: 'product reptile', link: '/reptile', subName: 'DATA VERIFICATION', desc: 'Then, we ensure data accuracy and security using this tool', deployed: [{name: 'Ethiopia →', link: ''}, {name: 'Zambia →', link: 'https://fist-cleandat.iri.columbia.edu/comzambia'}, {name: 'Nigeria →', link: ''}, {name: 'Congo →', link: ''}]},
-  {name: '03. Sliders →', img: prodSlider, alt: 'product slider', link: '/sliders', subName: 'DATA VISUALIZATION', desc: 'Now finally, though this web platform, policy makers can access and utilize data to make informed decisions', deployed: [{name: 'Ethiopia →', link: 'https://columbia-desdr.github.io/Sliders-ethiopia/'}, {name: 'Zambia →', link: ''}, {name: 'Nigeria →', link: 'https://columbia-desdr.github.io/Sliders-nigeria/'}, {name: 'Congo →', link: 'https://columbia-desdr.github.io/Sliders-drc'}]}
+  {name: '01. Survey Your Way →', img: prodIkon, alt: 'product ikon', link: '/survey-your-way', subName: 'DATA COLLECTION', desc: 'First, we utilize mobile messaging platforms for accessible and respectful engagement and data collection from local communities', deployed: [{name: 'Noki →', link: 'https://fist-noki.iri.columbia.edu/login'}, {name: 'iKON →', link: 'https://fist-ikonadmin.iri.columbia.edu/login?next=%2Fadmin'}]},
+  {name: '02. Reptile →', img: prodReptile, alt: 'product reptile', link: '/reptile', subName: 'DATA VERIFICATION', desc: 'Then, we ensure data accuracy and security using this tool', deployed: [{name: 'Ethiopia →', link: 'https://fist-cleandat.iri.columbia.edu/com'}, {name: 'Zambia →', link: 'https://fist-cleandat.iri.columbia.edu/comzambia'}, {name: 'Congo →', link: 'http://ec2-18-117-152-17.us-east-2.compute.amazonaws.com/'}]},
+  {name: '03. Sliders →', img: prodSlider, alt: 'product slider', link: '/sliders', subName: 'DATA VISUALIZATION', desc: 'Now finally, though this web platform, policy makers can access and utilize data to make informed decisions', deployed: [{name: 'Senegal →', link: 'https://columbia-desdr.github.io/Sliders-senegal/'}, {name: 'Ethiopia →', link: 'https://columbia-desdr.github.io/Sliders-ethiopia/'}, {name: 'Zambia →', link: 'https://github.com/Columbia-DESDR/Sliders-refactor-zambia'}, {name: 'Nigeria →', link: 'https://columbia-desdr.github.io/Sliders-nigeria/'}, {name: 'Congo →', link: 'https://columbia-desdr.github.io/Sliders-drc'}]}
 ]
 
 export const principalInvestigators = [
@@ -28,7 +28,7 @@ export const principalInvestigators = [
   {name: '03. Lydia Chilton →', img: lydia, college: 'CS, Columbia University', link: 'https://www.cs.columbia.edu/~chilton/chilton.html'}
 ]
 
-export const members = ["Dieter Joubert", "Ritika Deshpande", "Tanisha Bisht", "Aaron Zhu", "Dieter Joubert", "Aaron Zhu"]
+export const members = ["Dieter Joubert", "Ritika Ganesh Deshpande", "Tanisha Bisht", "Miranda Zhou", "Dieter Joubert", "Aaron Zhu", "Amina Isayeva", "Kshitij D Gupta", "Ajit Sharma Kasturi", "Phoebe Adams"]
 
 export const publications = [
   {name: 'Playing to Adapt: Crowdsourcing Historical Climate Data with Gamification to Improve Farmer Risk Management Instruments', authors: 'Juan Nicolas Aguilera, Max Mauerman, Daniel Osgood', link: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3639580'},

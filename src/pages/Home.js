@@ -20,7 +20,7 @@ function App() {
             <h1 className='hero__title'>Open Insurance Toolkit</h1>
             <p className='hero__desc'>Traditional disaster risk management often relies on satellite data, which might not fully reflect the realities faced by vulnerable communities. DESDR (Decision Engine for Socioeconomic Disaster Risk) transforms this approach by integrating firsthand information from those most affected, enhancing accuracy and insight into disaster risks</p>
             <div className='hero__btn'>
-              <PrimaryBtn onClick={() => console.log('call to action')} id={'/#/#toolkit-section'}>EXPLORE OUR TOOLKIT</PrimaryBtn>
+              <PrimaryBtn onClick={() => window.open('https://github.com/Columbia-DESDR', '_blank')}>VISIT OUT REPOSITORY</PrimaryBtn>
             </div>
           </div>
           <div className='sponsors'>
