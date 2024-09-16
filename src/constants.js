@@ -28,7 +28,7 @@ export const principalInvestigators = [
   {name: '03. Lydia Chilton →', img: lydia, college: 'CS, Columbia University', link: 'https://www.cs.columbia.edu/~chilton/chilton.html'}
 ]
 
-export const members = ["Dieter Joubert", "Ritika Ganesh Deshpande", "Tanisha Bisht", "Miranda Zhou", "Dieter Joubert", "Aaron Zhu", "Amina Isayeva", "Kshitij D Gupta", "Ajit Sharma Kasturi", "Phoebe Adams"]
+export const members = ["Dieter Joubert", "Ritika Ganesh Deshpande", "Tanisha Bisht", "Miranda Zhou", "Aaron Zhu", "Amina Isayeva", "Kshitij D Gupta", "Ajit Sharma Kasturi", "Phoebe Adams"]
 
 export const publications = [
   {name: 'Playing to Adapt: Crowdsourcing Historical Climate Data with Gamification to Improve Farmer Risk Management Instruments', authors: 'Juan Nicolas Aguilera, Max Mauerman, Daniel Osgood', link: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3639580'},
