@@ -50,7 +50,7 @@ function App() {
 
       <div className='important'>
         <p className='important_desc'>DESDR will be released as open-source software, free for use by various organizations. This initiative not only aims to improve disaster relief efforts but also empowers the most affected communities by giving them a significant role in the solution-making process.</p>
-        <SecondaryDarkBtn onClick={() => window.open('https://github.com/Columbia-DESDR', '_blank')}>VISIT OUR REPOSITORY</SecondaryDarkBtn>
+        <SecondaryDarkBtn onClick={() => window.open('https://columbia-desdr.github.io/desdr-documentation/')}>READ DEVELOPER GUIDE</SecondaryDarkBtn>
       </div>
 
       <div className='team'>
