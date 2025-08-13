@@ -1,6 +1,6 @@
 # DESDR Main Website
 
-A React-based website for the Data for Evidence-based Solutions for Development and Resilience (DESDR) project at Columbia University.
+A React-based website for the Decision Engine for Socioeconomic Disaster Risk (DESDR).
 
 ## Quick Start
 
@@ -77,19 +77,9 @@ Edit `src/constants.js` in the `toolkit` array, specifically the Sliders section
 - **Testing Required**: Always test locally before deploying
 - **Assets**: Place images in `src/images/`
 
-## Technology Stack
-
-- React 18
-- React Router (navigation)
-- GitHub Pages (hosting)
-- Node.js/npm (build tools)
 
 ## Troubleshooting
 
 - **Deploy fails**: Check GitHub Pages settings
 - **Links broken**: Verify target URLs exist
 - **Build errors**: Run `npm install` and check console
-
-## Contact
-
-For questions about the DESDR project, contact the Columbia University IRI team.
