@@ -39,3 +39,70 @@ export const publications = [
   {name: 'iKON: Playing to Adapt', authors: 'Columbia Climate School newsletter 2021', link: 'https://iri.columbia.edu/news/ikon-playing-to-adapt/'},
   {name: 'Context-Aware Climate Intelligence: Integrating Community Data into AI Disaster Models', authors: 'Justine Mach, Kenny Frias', link: 'https://docs.google.com/presentation/d/1I2cEKmiWuY7YXb3qqvKoSku3tUseWDVscvjdbWMvv2g/edit?usp=sharing'},
 ]
+
+
+
+export const publications = [
+  {
+    name: 'Playing to Adapt: Crowdsourcing Historical Climate Data with Gamification to Improve Farmer Risk Management Instruments',
+    authors: 'Juan Nicolas Aguilera, Max Mauerman, Daniel Osgood',
+    link: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3639580',
+  },
+  {
+    name: 'Reptile: Aggregation-level Explanations for Hierarchical Data',
+    authors: 'Zachary Huang, Eugene Wu — SIGMOD 2022',
+    link: 'https://arxiv.org/abs/2103.07037',
+  },
+  {
+    name: 'Using Tech to Help African Farmers Collect Index Insurance Payouts',
+    authors: 'News Article — Aug 2022',
+    link: 'https://www.engineering.columbia.edu/news/using-tech-help-african-farmers-collect-payouts',
+  },
+  {
+    name: 'Voices of CS: Zachary Huang',
+    authors: 'Columbia CS Newsletter',
+    link: 'https://www.cs.columbia.edu/2022/voices-of-cs-zachary-huang/',
+  },
+  {
+    name: 'In New Project, Millions of Farmers Will Help to Improve Insurance Against Climate Disasters',
+    authors: 'Columbia Climate School Newsletter — 2021',
+    link: 'https://iri.columbia.edu/news/in-new-project-millions-of-farmers-will-help-to-improve-insurance-against-climate-disasters/',
+  },
+  {
+    name: 'iKON: Playing to Adapt',
+    authors: 'Columbia Climate School Newsletter — 2021',
+    link: 'https://iri.columbia.edu/news/ikon-playing-to-adapt/',
+  },
+  {
+    name: 'Context-Aware Climate Intelligence: Integrating Community Data into AI Disaster Models',
+    authors: 'Justine Mach, Kenny Frias',
+    link: 'https://docs.google.com/presentation/d/1I2cEKmiWuY7YXb3qqvKoSku3tUseWDVscvjdbWMvv2g/edit?usp=sharing',
+  },
+
+  {
+    name: 'Database Theory in Action: Database Visualization',
+    authors: 'Eugene Wu — ICDT Database Theory in Action 2025',
+    link: 'https://drops.dagstuhl.de/storage/00lipics/lipics-vol328-icdt2025/LIPIcs.ICDT.2025.35/LIPIcs.ICDT.2025.35.pdf',
+  },
+  {
+    name: 'Design-Specific Transformations in Visualization',
+    authors: 'Eugene Wu, Remco Chang — BELIV @ IEEE VIS 2024',
+    link: 'https://arxiv.org/abs/2407.06404',
+  },
+  {
+    name: 'DIG: The Data Interface Grammar',
+    authors: 'Yiru Chen, Jeffrey Tao, Eugene Wu — HILDA @ SIGMOD 2023',
+    link: 'https://www.dropbox.com/s/bhwikxq8932dsg5/dig-hilda23-cr.pdf?dl=0',
+  },
+  {
+    name: 'NL2INTERFACE: Interactive Visualization Interface Generation from Natural Language Queries',
+    authors: 'Yiru Chen, Ryan Li, Austin Mac, Tianbao Xie, Tao Yu, Eugene Wu — VIS NLVis Workshop 2022',
+    link: 'https://arxiv.org/abs/2209.08834',
+  },
+  {
+    name: 'View Composition Algebra for Ad Hoc Comparisons',
+    authors: 'Eugene Wu — TVCG 2022',
+    link: 'https://arxiv.org/abs/2202.07836',
+  },
+];
+
