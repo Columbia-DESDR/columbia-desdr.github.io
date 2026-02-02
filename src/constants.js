@@ -49,11 +49,6 @@ export const publications = [
     link: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3639580',
   },
   {
-    name: 'Reptile: Aggregation-level Explanations for Hierarchical Data',
-    authors: 'Zachary Huang, Eugene Wu — SIGMOD 2022',
-    link: 'https://arxiv.org/abs/2103.07037',
-  },
-  {
     name: 'Using Tech to Help African Farmers Collect Index Insurance Payouts',
     authors: 'News Article — Aug 2022',
     link: 'https://www.engineering.columbia.edu/news/using-tech-help-african-farmers-collect-payouts',
@@ -80,6 +75,11 @@ export const publications = [
   },
 
   {
+    name: 'Reptile: Aggregation-level Explanations for Hierarchical Data',
+    authors: 'Zachary Huang, Eugene Wu — SIGMOD 2022',
+    link: 'https://arxiv.org/abs/2103.07037',
+  },
+  {
     name: 'Database Theory in Action: Database Visualization',
     authors: 'Eugene Wu — ICDT Database Theory in Action 2025',
     link: 'https://drops.dagstuhl.de/storage/00lipics/lipics-vol328-icdt2025/LIPIcs.ICDT.2025.35/LIPIcs.ICDT.2025.35.pdf',
@@ -104,5 +104,21 @@ export const publications = [
     authors: 'Eugene Wu — TVCG 2022',
     link: 'https://arxiv.org/abs/2202.07836',
   },
+  {
+    name: 'Demonstration of PI2: Interactive Visualization Interface Generation for SQL Analysis in Notebook',
+    authors: 'Jeffrey Tao, Yiru Chen, Eugene Wu',
+    link: 'https://doi.org/10.1145/3514221.3520153'
+  },
+  {
+    name: 'PI2: End-to-end Interactive Visualization Interface Generation from Queries',
+    authors: 'Yiru Chen, Eugene Wu',
+    link: 'https://arxiv.org/abs/2107.08203'
+  },
+  {
+    name: 'Aggregation Consistency Errors in Semantic Layers and How to Avoid Them',
+    authors: 'Zezhou Huang, Pavan Kalyan Damalapati, Eugene Wu',
+    link: 'https://dl.acm.org/doi/10.1145/3597465.3605224' 
+  }
+
 ];
 
