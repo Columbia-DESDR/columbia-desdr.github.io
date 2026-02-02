@@ -30,16 +30,16 @@ export const principalInvestigators = [
 
 export const members = ["Dieter Joubert", "Ritika Ganesh Deshpande", "Tanisha Bisht", "Miranda Zhou", "Aaron Zhu", "Amina Isayeva", "Kshitij D Gupta", "Ajit Sharma Kasturi", "Phoebe Adams","Emnet Tsegaye","Azam Khan","Jasper Sands","Lilita Yenew","Jongho Bae","Kenny Frias","Justine Pui Ying Mach"]
 
-export const publications = [ 
-  {name: 'Playing to Adapt: Crowdsourcing Historical Climate Data with Gamification to Improve Farmer Risk Management Instruments', authors: 'Juan Nicolas Aguilera, Max Mauerman, Daniel Osgood', link: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3639580'},
-  {name: 'Reptile: Aggregation-level Explanations for Hierarchical Data', authors: 'Zachary Huang, Eugene Wu - SIGMOD 2022', link: 'https://arxiv.org/abs/2103.07037'},
-  {name: 'Using Tech to Help African Farmers Collect Index Insurance Payouts', authors: 'News Article Aug 2022', link: 'https://www.engineering.columbia.edu/news/using-tech-help-african-farmers-collect-payouts'},
-  {name: 'Voices of CS: Zachary Huang', authors: 'Columbia CS Newsletter', link: 'https://www.cs.columbia.edu/2022/voices-of-cs-zachary-huang/'},
-  {name: 'In New Project, Millions of Farmers Will Help to Improve Insurance Against Climate Disasters', authors: 'Columbia Climate School newsletter 2021', link: 'https://iri.columbia.edu/news/in-new-project-millions-of-farmers-will-help-to-improve-insurance-against-climate-disasters/'},
-  {name: 'iKON: Playing to Adapt', authors: 'Columbia Climate School newsletter 2021', link: 'https://iri.columbia.edu/news/ikon-playing-to-adapt/'},
-  {name: 'Context-Aware Climate Intelligence: Integrating Community Data into AI Disaster Models', authors: 'Justine Mach, Kenny Frias', link: 'https://docs.google.com/presentation/d/1I2cEKmiWuY7YXb3qqvKoSku3tUseWDVscvjdbWMvv2g/edit?usp=sharing'},
-]
-
+//export const publications = [ 
+//  {name: 'Playing to Adapt: Crowdsourcing Historical Climate Data with Gamification to Improve Farmer Risk Management Instruments', authors: 'Juan Nicolas Aguilera, Max Mauerman, Daniel Osgood', link: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3639580'},
+//  {name: 'Reptile: Aggregation-level Explanations for Hierarchical Data', authors: 'Zachary Huang, Eugene Wu - SIGMOD 2022', link: 'https://arxiv.org/abs/2103.07037'},
+//  {name: 'Using Tech to Help African Farmers Collect Index Insurance Payouts', authors: 'News Article Aug 2022', link: 'https://www.engineering.columbia.edu/news/using-tech-help-african-farmers-collect-payouts'},
+//  {name: 'Voices of CS: Zachary Huang', authors: 'Columbia CS Newsletter', link: 'https://www.cs.columbia.edu/2022/voices-of-cs-zachary-huang/'},
+//  {name: 'In New Project, Millions of Farmers Will Help to Improve Insurance Against Climate Disasters', authors: 'Columbia Climate School newsletter 2021', link: 'https://iri.columbia.edu/news/in-new-project-millions-of-farmers-will-help-to-improve-insurance-against-climate-disasters/'},
+//  {name: 'iKON: Playing to Adapt', authors: 'Columbia Climate School newsletter 2021', link: 'https://iri.columbia.edu/news/ikon-playing-to-adapt/'},
+//  {name: 'Context-Aware Climate Intelligence: Integrating Community Data into AI Disaster Models', authors: 'Justine Mach, Kenny Frias', link: 'https://docs.google.com/presentation/d/1I2cEKmiWuY7YXb3qqvKoSku3tUseWDVscvjdbWMvv2g/edit?usp=sharing'},
+//]
+//
 
 
 export const publications = [
