@@ -71,7 +71,7 @@ function App() {
 
       <div className='publication'>
         <h1 className='publication__title'>Publications</h1>
-        {publications.map((publication,k) => <div className='div_secondary_dark' onClick={() => window.open(publication.link, '_blank')}>
+        {publications.map((publication,k) => <div key={k} className='div_secondary_dark' onClick={() => publication.link && window.open(publication.link, '_blank')}>
           <h3 className='publication__name'>{publication.name}</h3>
           <p className='publication__authors'>{publication.authors}</p>
         </div>)}
