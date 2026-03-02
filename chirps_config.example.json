@@ -1,0 +1,27 @@
+{
+  "source": {
+    "shapefile": null,
+    "use_gee_boundaries": true,
+    "country_name": "Madagascar",
+    "admin_level": 2
+  },
+
+  "filter": {
+    "admin_field": "ADM2_NAME",
+    "admin_names": ["Toliary-II", "Manakara Atsimo"]
+  },
+
+  "date_range": {
+    "start_date": "2015-01-01",
+    "end_date": "2025-01-01"
+  },
+
+  "season": {
+    "early_first": 31,
+    "early_last": 39,
+    "late_first": 40,
+    "late_last": 48
+  },
+
+  "output_dir": "./output"
+}
