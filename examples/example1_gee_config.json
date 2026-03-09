@@ -1,0 +1,27 @@
+{
+  "source": {
+    "shapefile": null,
+    "use_gee_boundaries": true,
+    "country_name": "Kenya",
+    "admin_level": 2
+  },
+
+  "filter": {
+    "admin_field": "ADM2_NAME",
+    "admin_names": ["Nairobi", "Mombasa"]
+  },
+
+  "date_range": {
+    "start_date": "2023-01-01",
+    "end_date": "2024-01-01"
+  },
+
+  "season": {
+    "early_first": 9,
+    "early_last": 17,
+    "late_first": 28,
+    "late_last": 36
+  },
+
+  "output_dir": "./examples/output_gee"
+}

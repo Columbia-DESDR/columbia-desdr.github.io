@@ -1,0 +1,27 @@
+{
+  "source": {
+    "shapefile": "./examples/senegal_shapefile/senegal_districts.shp",
+    "use_gee_boundaries": false,
+    "country_name": null,
+    "admin_level": 2
+  },
+
+  "filter": {
+    "admin_field": "ADM2_NAME",
+    "admin_names": ["Dakar", "Thies"]
+  },
+
+  "date_range": {
+    "start_date": "2022-01-01",
+    "end_date": "2023-01-01"
+  },
+
+  "season": {
+    "early_first": 18,
+    "early_last": 27,
+    "late_first": 28,
+    "late_last": 36
+  },
+
+  "output_dir": "./examples/output_shapefile"
+}

@@ -31,17 +31,17 @@ GEE Setup (one-time):
     (Replace 3.13 with your Python version.)
 
 Usage:
-    # Option 1: Use GEE boundaries (no shapefile needed)
-    python3 chirps_pipeline.py --use-gee-boundaries --country-name "Madagascar" --admin-level 2 --admin-names "Toliary-II,Manakara Atsimo"
+    # Recommended: provide a JSON config file (see chirps_config.example.json)
+    python3 chirps_pipeline.py --config my_config.json
 
-    # Option 2: Use GEE boundaries with a date range
-    python3 chirps_pipeline.py --use-gee-boundaries --country-name "Kenya" --admin-level 2 --admin-names "Nairobi,Mombasa" --start-date "2020-01-01" --end-date "2023-01-01"
+    # CLI-only: use GEE boundaries (no shapefile needed)
+    python3 chirps_pipeline.py --use-gee-boundaries --country-name "Kenya" --admin-level 2 --admin-names "Nairobi,Mombasa"
 
-    # Option 3: Use a local shapefile
-    python3 chirps_pipeline.py --shapefile path/to/shapefile.shp --admin-field ADM2_NAME --admin-names "Area1,Area2"
+    # CLI-only: use a local shapefile
+    python3 chirps_pipeline.py --shapefile path/to/boundaries.shp --admin-field ADM2_NAME --admin-names "Area1,Area2"
 
-    # With all optional parameters
-    python3 chirps_pipeline.py --use-gee-boundaries --country-name "Madagascar" --admin-level 2 --output-dir ./output --start-date "2015-01-01" --end-date "2025-01-01" --early-first 31 --early-last 39 --late-first 40 --late-last 48
+    # Mix config file with CLI overrides (CLI wins)
+    python3 chirps_pipeline.py --config my_config.json --output-dir ./custom_output
 
 Output:
     - chirps_raw.csv  : Pentad rainfall data with full DESDR schema (system:index, ADM0-2, mean, etc.)
@@ -57,6 +57,45 @@ import json
 from pathlib import Path
 from typing import List, Optional, Tuple
 from shapely.geometry import shape
+
+
+def load_config(config_path: str) -> dict:
+    """
+    Load pipeline configuration from a JSON file.
+
+    The config file provides all parameters without editing the script.
+    See chirps_config.example.json for the expected structure.
+
+    Any CLI arguments provided alongside --config will override the
+    corresponding config file values.
+    """
+    config_path = Path(config_path)
+    if not config_path.exists():
+        raise FileNotFoundError(f"Config file not found: {config_path}")
+
+    with open(config_path) as f:
+        raw = json.load(f)
+
+    source = raw.get("source", {})
+    filt = raw.get("filter", {})
+    date_range = raw.get("date_range", {})
+    season = raw.get("season", {})
+
+    return {
+        "shapefile": source.get("shapefile"),
+        "use_gee_boundaries": source.get("use_gee_boundaries", False),
+        "country_name": source.get("country_name"),
+        "admin_level": source.get("admin_level", 2),
+        "admin_field": filt.get("admin_field", "ADM2_NAME"),
+        "admin_names": filt.get("admin_names"),
+        "start_date": date_range.get("start_date"),
+        "end_date": date_range.get("end_date"),
+        "early_first": season.get("early_first", 31),
+        "early_last": season.get("early_last", 39),
+        "late_first": season.get("late_first", 40),
+        "late_last": season.get("late_last", 48),
+        "output_dir": raw.get("output_dir", "./output"),
+    }
 
 
 def initialize_earth_engine():
@@ -800,158 +839,205 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Process all admin areas in shapefile:
-  python chirps_pipeline.py --shapefile madagascar.shp
-  
-  # Process specific admin areas:
-  python chirps_pipeline.py --shapefile madagascar.shp --admin-names "Manakara Atsimo,Toliary-I,Toliary-II"
-  
-  # With custom output directory and dekad ranges:
-  python chirps_pipeline.py --shapefile madagascar.shp --output-dir ./data --early-first 31 --early-last 39
+  # Use a JSON config file (recommended):
+  python chirps_pipeline.py --config chirps_config.example.json
+
+  # Use a local shapefile via CLI:
+  python chirps_pipeline.py --shapefile boundaries.shp --admin-field ADM2_NAME
+
+  # Use GEE boundaries via CLI:
+  python chirps_pipeline.py --use-gee-boundaries --country-name "Kenya" --admin-level 2
+
+  # Config file with CLI overrides (CLI takes precedence):
+  python chirps_pipeline.py --config my_config.json --admin-names "Area1,Area2"
         """
     )
-    
+
+    parser.add_argument(
+        '--config',
+        type=str,
+        default=None,
+        help='Path to a JSON config file (see chirps_config.example.json). '
+             'CLI arguments override config file values.'
+    )
+
     parser.add_argument(
         '--shapefile',
         type=str,
         default=None,
-        help='Path to shapefile containing admin boundaries (optional if using --use-gee-boundaries)'
+        help='Path to shapefile containing admin boundaries'
     )
-    
+
     parser.add_argument(
         '--use-gee-boundaries',
         action='store_true',
-        help='Load admin boundaries from Google Earth Engine (GAUL dataset) instead of shapefile'
+        default=None,
+        help='Load admin boundaries from Google Earth Engine (GAUL dataset) instead of a shapefile'
     )
-    
+
     parser.add_argument(
         '--country-name',
         type=str,
         default=None,
-        help='Country name for GEE boundaries (required if --use-gee-boundaries)'
+        help='Country name for GEE boundaries (required with --use-gee-boundaries)'
     )
-    
+
     parser.add_argument(
         '--admin-level',
         type=int,
-        default=2,
-        help='Administrative level for GEE (0=country, 1=province, 2=district, default=2)'
+        default=None,
+        help='Administrative level for GEE (0=country, 1=province, 2=district)'
     )
-    
+
     parser.add_argument(
         '--admin-field',
         type=str,
-        default='ADM2_NAME',
-        help='Field name in shapefile containing admin area names (default: ADM2_NAME)'
+        default=None,
+        help='Column/field name in the shapefile that identifies sub-units (e.g. ADM2_NAME, NAME_2, GID)'
     )
-    
+
     parser.add_argument(
         '--admin-names',
         type=str,
         default=None,
-        help='Comma-separated list of specific admin area names to process (optional)'
+        help='Comma-separated list of sub-unit names to include (optional; omit to process all)'
     )
-    
+
     parser.add_argument(
         '--country-filter',
         type=str,
         default=None,
-        help='Country name to filter by (e.g., "Madagascar")'
+        help='Country name to filter features by (useful when a shapefile spans multiple countries)'
     )
-    
+
     parser.add_argument(
         '--start-date',
         type=str,
         default=None,
-        help='Start date for CHIRPS data (YYYY-MM-DD, e.g., "2015-01-01"). Defaults to all available data.'
+        help='Start date for CHIRPS data (YYYY-MM-DD). Defaults to all available data.'
     )
-    
+
     parser.add_argument(
         '--end-date',
         type=str,
         default=None,
-        help='End date for CHIRPS data (YYYY-MM-DD, e.g., "2025-12-31"). Defaults to present.'
+        help='End date for CHIRPS data (YYYY-MM-DD). Defaults to present.'
     )
-    
+
     parser.add_argument(
         '--output-dir',
         type=str,
-        default='./output',
+        default=None,
         help='Output directory for CSV files (default: ./output)'
     )
-    
+
     parser.add_argument(
-        '--early-first',
-        type=int,
-        default=31,
+        '--early-first', type=int, default=None,
         help='First dekad of early season (default: 31)'
     )
-    
     parser.add_argument(
-        '--early-last',
-        type=int,
-        default=39,
+        '--early-last', type=int, default=None,
         help='Last dekad of early season (default: 39)'
     )
-    
     parser.add_argument(
-        '--late-first',
-        type=int,
-        default=40,
+        '--late-first', type=int, default=None,
         help='First dekad of late season (default: 40)'
     )
-    
     parser.add_argument(
-        '--late-last',
-        type=int,
-        default=48,
+        '--late-last', type=int, default=None,
         help='Last dekad of late season (default: 48)'
     )
-    
+
     args = parser.parse_args()
-    
-    # Validate arguments
-    if args.use_gee_boundaries:
-        if not args.country_name:
-            parser.error("--country-name is required when using --use-gee-boundaries")
+
+    # -----------------------------------------------------------
+    # Build effective params: config file defaults < CLI overrides
+    # -----------------------------------------------------------
+    defaults = {
+        "shapefile": None,
+        "use_gee_boundaries": False,
+        "country_name": None,
+        "admin_level": 2,
+        "admin_field": "ADM2_NAME",
+        "admin_names": None,
+        "start_date": None,
+        "end_date": None,
+        "output_dir": "./output",
+        "early_first": 31,
+        "early_last": 39,
+        "late_first": 40,
+        "late_last": 48,
+    }
+
+    if args.config:
+        cfg = load_config(args.config)
+        defaults.update({k: v for k, v in cfg.items() if v is not None})
+
+    def pick(cli_val, key):
+        """Return CLI value if explicitly provided, otherwise the config/default."""
+        return cli_val if cli_val is not None else defaults[key]
+
+    shapefile      = pick(args.shapefile, "shapefile")
+    use_gee        = pick(args.use_gee_boundaries, "use_gee_boundaries")
+    country_name   = pick(args.country_name, "country_name")
+    admin_level    = pick(args.admin_level, "admin_level")
+    admin_field    = pick(args.admin_field, "admin_field")
+    start_date     = pick(args.start_date, "start_date")
+    end_date       = pick(args.end_date, "end_date")
+    output_dir     = pick(args.output_dir, "output_dir")
+    early_first    = pick(args.early_first, "early_first")
+    early_last     = pick(args.early_last, "early_last")
+    late_first     = pick(args.late_first, "late_first")
+    late_last      = pick(args.late_last, "late_last")
+
+    # admin_names: CLI is a comma-separated string; config is a list
+    if args.admin_names is not None:
+        admin_names = [n.strip() for n in args.admin_names.split(',')]
     else:
-        if not args.shapefile:
-            parser.error("--shapefile is required when not using --use-gee-boundaries")
-    
-    # Parse admin names if provided
-    admin_names = None
-    if args.admin_names:
-        admin_names = [name.strip() for name in args.admin_names.split(',')]
-    
+        admin_names = defaults["admin_names"]
+
+    # Validate: user must supply either a shapefile or GEE boundaries
+    if use_gee:
+        if not country_name:
+            parser.error(
+                "--country-name (or source.country_name in config) is required "
+                "when using GEE boundaries"
+            )
+    else:
+        if not shapefile:
+            parser.error(
+                "Provide --shapefile (or source.shapefile in config), "
+                "or use --use-gee-boundaries with --country-name"
+            )
+
     # Run pipeline
     try:
         process_chirps_pipeline(
-            shapefile_path=args.shapefile,
-            country_name=args.country_name,
-            admin_level=args.admin_level,
-            admin_field=args.admin_field,
+            shapefile_path=shapefile,
+            country_name=country_name,
+            admin_level=admin_level,
+            admin_field=admin_field,
             admin_names=admin_names,
             country_filter=args.country_filter,
-            use_gee_boundaries=args.use_gee_boundaries,
-            output_dir=args.output_dir,
-            start_date=args.start_date,
-            end_date=args.end_date,
-            early_first=args.early_first,
-            early_last=args.early_last,
-            late_first=args.late_first,
-            late_last=args.late_last
+            use_gee_boundaries=use_gee,
+            output_dir=output_dir,
+            start_date=start_date,
+            end_date=end_date,
+            early_first=early_first,
+            early_last=early_last,
+            late_first=late_first,
+            late_last=late_last
         )
     except Exception as e:
-        print(f"\n❌ Error: {e}")
+        print(f"\n Error: {e}")
         import traceback
         traceback.print_exc()
         return 1
-    
+
     return 0
 
 
 if __name__ == "__main__":
-    import json
     import sys
     sys.exit(main())
 
